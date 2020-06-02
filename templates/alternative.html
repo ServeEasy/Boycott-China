@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> Boycott China </title>
+</head>
+<body>
+<table border=1>
+<tr>
+<th> Chinese App </th>
+<th> Icon </th>
+<th> Alternative App </th>
+<th> Link </th>
+</tr>
+{% for data in result %}
+<tr>
+<td> {{data.0}} </td>
+<td><img src={{data.3}} alt="W3Schools.com" style="width:104px;height:142px;"></td>
+<td> {{data.1}} </td>
+<td> <a href={{data.2}}>Click Here...</a> </td>
+</tr>
+{% endfor %}
+</table>
+
+
+
+</body>
+</html>
