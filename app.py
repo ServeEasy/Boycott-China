@@ -11,10 +11,7 @@ mysql = MySQL(app)
 
 @app.route('/')
 def home():
-    cur = mysql.connection.cursor()
-    cur.execute("select * from chinese_apps")
-    c_apps = cur.fetchall()
-    return render_template('home.html',result = c_apps)
+    return render_template('home.html')
 
 
 @app.route('/alternatives')
@@ -31,7 +28,9 @@ def Search():
     cur = mysql.connection.cursor()
     cur.execute("select * from alternatives where LOWER(chinese_app) LIKE '%"+search.lower()+"%'")
     c_apps = cur.fetchall()
-    return render_template('alternative.html',result = c_apps)
+    if c_apps:
+        return render_template('alternative.html',result = c_apps)
+    return render_template('tryAgain.html')
 
 @app.route('/suggest')
 def suggest():
