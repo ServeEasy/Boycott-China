@@ -4,8 +4,8 @@ import MySQLdb
 import sys
 app=Flask(__name__)
 app.config['MYSQL_HOST'] = "localhost"
-app.config['MYSQL_USER'] = "Harshit"
-app.config['MYSQL_PASSWORD'] = "Harshit"
+app.config['MYSQL_USER'] = "root"
+app.config['MYSQL_PASSWORD'] = "baba@159"
 app.config['MYSQL_DB'] = "boycott_china"
 mysql = MySQL(app)
 
