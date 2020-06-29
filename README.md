@@ -1,1 +1,1 @@
-# Boycott-China
+# Boycott-China.
